@@ -1,0 +1,244 @@
+#loader-container, #probes-cards, .log-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#loader-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+#probes-cards {
+    color: rgb(248, 244, 244);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px rgb(0 0 0 / 20%);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    height: 420px;
+    width: 350px;
+    margin: 0 9px 18px 9px;
+}
+
+.card__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: rgb(57, 118, 199);
+    border-radius: 6px 6px 0 0;
+}
+
+.card__date {
+    z-index: 5;
+    padding: 12px 0;
+    position: relative;
+    padding: 2px 0 12px 0;
+    flex-direction: column;
+}
+
+.card__date::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: rgb(224, 228, 233);
+}
+
+.card__title {
+    font-weight: 500;
+    border-radius: 6px;
+    background: rgb(57, 118, 199);
+    font-size: 16px;
+}
+
+.card__content {
+    color: rgb(32, 31, 31);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.card__attributes, .card__date {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.card__attributes {
+    margin-top: 16px;
+    flex-direction: column;
+}
+
+.card__columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.card__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.card__column {
+    width: 163px;
+    height: 100%;
+}
+
+.card__last-active, .data__attribute {
+    font-weight: 300;
+}
+
+.data__attribute {
+    margin-bottom: 6px;
+}
+
+.card__last-active {
+    margin-right: 8px;
+}
+
+.data__value, .card__date-value {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logger {
+    display: flex;
+    flex-direction: column;
+    transition: .15s ease-in-out;
+    position: fixed;
+    width: 0;
+    right: 0;
+    background-color: rgb(238, 245, 248);
+    box-shadow: -2px 0px 2px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    z-index: 30;
+    opacity: 0;
+    height: 100%;
+    top: 44px;
+    padding: 0;
+}
+
+.logger__content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+.logger__content::-webkit-scrollbar-track {
+background:  rgb(235, 235, 235);
+border-radius: 16px;
+}
+  
+.logger__content::-webkit-scrollbar-thumb {
+    background-color: rgb(211, 211, 211);
+    border-radius: 20px;
+}
+
+.logger__content::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: #999;
+}
+
+.logger-opened {
+    width: 40%;
+    opacity: 1;
+    padding: 60px 20px 95px;
+}
+
+@media screen and (max-width: 900px) {
+    .logger-opened {
+        width: 100%;
+    }
+}
+
+.logger__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    position: absolute;
+    background: rgb(238, 245, 248);
+    top: 0;
+    width: 100%;
+    padding: 18px 0;
+}
+
+.logger__title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: rgb(208, 210, 211);
+}
+
+.logger__content {
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.log {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.log__number, .log__object {
+    font-size: 14px;
+}
+
+.log__number {
+    font-weight: 800;
+    margin-right: 6px;
+}
+
+.log__object {
+    font-weight: 400;
+}
+
+.logger-icon {
+    fill: #fff;
+}
+
+.logger-icon_active {
+    fill: rgb(41, 41, 41) !important;
+}
