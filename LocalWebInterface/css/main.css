@@ -1,0 +1,139 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-ThinItalic-webfont.eot');
+    src: url('Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-ThinItalic-webfont.woff') format('woff'),
+         url('Roboto-ThinItalic-webfont.ttf') format('truetype'),
+         url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg');
+}
+
+body {
+    background-color: rgb(248, 244, 244);
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background: none !important;
+    border: none;
+}
+
+.header__buttons {
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 60px 14px;
+}
+
+.app {
+    height: 100%;
+}
+
+* {
+    font-size: 14px;
+    font-family: 'Roboto';
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    fill: rgb(41, 41, 41);
+    transition: .15s ease;
+    color: rgb(41, 41, 41);
+}
+
+header, footer {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: rgb(57, 118, 199);
+    align-items: center;
+    z-index: 50;
+}
+
+header {
+    height: 44px;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+footer {
+    height: 34px;
+    justify-content: center;
+    bottom: 0;
+    padding: 8px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-icon {
+    display: flex;
+    fill: #fff;
+}
+
+.header-icon:hover {
+    cursor: pointer;
+    fill: rgb(41, 41, 41);
+    transition: .15s ease;
+}
+
+.title {
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    right: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .title {
+        right: 10px;
+        font-size: 15px;
+    }
+    .header-icon:hover {
+        cursor: pointer;
+        transition: .15s ease;
+        fill: #fff;
+    }
+}
+
+.logo {
+    height: 42px;
+    width: auto;
+    margin-right: 12px;
+}
+
+.mail {
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.footer-link {
+    font-weight: bold;
+}
